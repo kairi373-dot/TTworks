@@ -12,10 +12,7 @@
     <aside class="sidebar">
       <div class="brand">
         <div class="logo">T</div>
-        <div>
-          <strong>TTworks</strong>
-          <span>Company HQ</span>
-        </div>
+        <div><strong>TTworks</strong><span>AI Company HQ</span></div>
       </div>
 
       <nav>
@@ -23,12 +20,14 @@
         <a href="#departments">🏬 部署</a>
         <a href="#projects">📁 案件</a>
         <a href="#staff">🤖 AI社員</a>
+        <a href="#command">💬 社内指示</a>
+        <a href="#reports">📝 日報</a>
         <a href="#approvals">✅ 承認待ち</a>
         <a href="#characters">🎨 キャラクター</a>
       </nav>
 
       <div class="owner-card">
-        <span>代表</span>
+        <span>代表取締役</span>
         <strong>てっぺい</strong>
         <small>最終承認・契約・決済</small>
       </div>
@@ -37,38 +36,58 @@
     <div class="workspace">
       <header class="topbar">
         <div>
-          <span class="crumb">TTworks / 本社</span>
+          <span class="crumb">TTworks / 本社 / 経営管理</span>
           <h1>会社ダッシュボード</h1>
         </div>
         <div class="top-actions">
-          <button type="button">＋ 新規案件</button>
-          <div class="company-status"><i></i> 稼働中</div>
+          <button type="button" id="newProjectBtn">＋ 新規案件</button>
+          <div class="company-status"><i></i> AI社員 稼働中</div>
         </div>
       </header>
 
       <main id="hq">
         <section class="welcome">
           <div>
-            <p>GOOD AFTERNOON</p>
-            <h2>TTworks、本日の業務状況</h2>
-            <span>AI各部署が制作・確認・登録準備を分担して進行します。</span>
+            <p>TTWORKS AI COMPANY</p>
+            <h2>本日の会社運営状況</h2>
+            <span>案件は各部署へ自動配属し、承認が必要な工程だけ代表へ上げます。</span>
           </div>
           <div class="date-box">2026.10.02</div>
         </section>
 
         <section class="kpis" id="metrics"></section>
 
+        <section class="executive-grid">
+          <article class="section executive-card">
+            <div class="section-title">
+              <div><span>CEO DESK</span><h3>社長室</h3></div>
+            </div>
+            <div class="ceo-summary">
+              <div><strong id="ceoPriority">FISH-002</strong><span>最優先案件</span></div>
+              <div><strong id="ceoApprovalCount">0</strong><span>承認待ち</span></div>
+              <div><strong id="ceoRiskCount">0</strong><span>要確認</span></div>
+            </div>
+          </article>
+
+          <article class="section executive-card">
+            <div class="section-title">
+              <div><span>MANAGEMENT</span><h3>経営モニター</h3></div>
+            </div>
+            <div class="management-list" id="managementList"></div>
+          </article>
+        </section>
+
         <section class="section" id="departments">
           <div class="section-title">
             <div><span>ORGANIZATION</span><h3>部署一覧</h3></div>
-            <small>案件は工程に応じて部署間を移動</small>
+            <small>責任者AIが案件を管理</small>
           </div>
           <div class="department-grid" id="departmentsGrid"></div>
         </section>
 
         <section class="section" id="projects">
           <div class="section-title">
-            <div><span>PROJECTS</span><h3>進行中の案件</h3></div>
+            <div><span>PROJECT BOARD</span><h3>案件管理</h3></div>
             <select id="projectFilter">
               <option value="all">すべて</option>
               <option value="active">進行中</option>
@@ -79,25 +98,46 @@
           <div class="project-table" id="projectGrid"></div>
         </section>
 
-        <section class="split">
-          <section class="section" id="staff">
+        <section class="split" id="staff">
+          <section class="section">
             <div class="section-title">
-              <div><span>STAFF</span><h3>AI社員</h3></div>
+              <div><span>STAFF DIRECTORY</span><h3>AI社員名簿</h3></div>
             </div>
             <div class="staff-list" id="agents"></div>
           </section>
 
           <section class="section" id="approvals">
             <div class="section-title">
-              <div><span>APPROVAL</span><h3>社長承認待ち</h3></div>
+              <div><span>CEO APPROVAL</span><h3>社長承認待ち</h3></div>
             </div>
             <div class="approval-list" id="nextActions"></div>
           </section>
         </section>
 
+        <section class="split" id="command">
+          <section class="section">
+            <div class="section-title">
+              <div><span>INTERNAL CHAT</span><h3>社内指示</h3></div>
+            </div>
+            <div class="chat-box" id="chatLog"></div>
+            <form class="chat-input" id="commandForm">
+              <input id="commandInput" type="text" placeholder="例：FISH-002を優先して、品質管理まで進める">
+              <button type="submit">指示を送る</button>
+            </form>
+            <p class="local-note">※ 現在はダッシュボード内の記録のみ。外部サービスへの実行はしません。</p>
+          </section>
+
+          <section class="section" id="reports">
+            <div class="section-title">
+              <div><span>DAILY REPORT</span><h3>本日の日報</h3></div>
+            </div>
+            <div class="report-list" id="reportsList"></div>
+          </section>
+        </section>
+
         <section class="section" id="characters">
           <div class="section-title">
-            <div><span>ASSETS</span><h3>キャラクター資産</h3></div>
+            <div><span>COMPANY ASSETS</span><h3>キャラクター資産</h3></div>
           </div>
           <div class="character-grid" id="charactersGrid"></div>
         </section>
