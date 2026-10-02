@@ -3,81 +3,107 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#111111">
-  <title>TTworks Control Center</title>
+  <meta name="theme-color" content="#eef2f7">
+  <title>TTworks Company HQ</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <div>
-      <p class="eyebrow">TTworks</p>
-      <h1>Control Center</h1>
+  <div class="company-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">T</div>
+        <div>
+          <strong>TTworks</strong>
+          <span>Company HQ</span>
+        </div>
+      </div>
+
+      <nav>
+        <a class="active" href="#hq">🏢 本社ホーム</a>
+        <a href="#departments">🏬 部署</a>
+        <a href="#projects">📁 案件</a>
+        <a href="#staff">🤖 AI社員</a>
+        <a href="#approvals">✅ 承認待ち</a>
+        <a href="#characters">🎨 キャラクター</a>
+      </nav>
+
+      <div class="owner-card">
+        <span>代表</span>
+        <strong>てっぺい</strong>
+        <small>最終承認・契約・決済</small>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <div>
+          <span class="crumb">TTworks / 本社</span>
+          <h1>会社ダッシュボード</h1>
+        </div>
+        <div class="top-actions">
+          <button type="button">＋ 新規案件</button>
+          <div class="company-status"><i></i> 稼働中</div>
+        </div>
+      </header>
+
+      <main id="hq">
+        <section class="welcome">
+          <div>
+            <p>GOOD AFTERNOON</p>
+            <h2>TTworks、本日の業務状況</h2>
+            <span>AI各部署が制作・確認・登録準備を分担して進行します。</span>
+          </div>
+          <div class="date-box">2026.10.02</div>
+        </section>
+
+        <section class="kpis" id="metrics"></section>
+
+        <section class="section" id="departments">
+          <div class="section-title">
+            <div><span>ORGANIZATION</span><h3>部署一覧</h3></div>
+            <small>案件は工程に応じて部署間を移動</small>
+          </div>
+          <div class="department-grid" id="departmentsGrid"></div>
+        </section>
+
+        <section class="section" id="projects">
+          <div class="section-title">
+            <div><span>PROJECTS</span><h3>進行中の案件</h3></div>
+            <select id="projectFilter">
+              <option value="all">すべて</option>
+              <option value="active">進行中</option>
+              <option value="review">確認待ち</option>
+              <option value="ready">登録準備</option>
+            </select>
+          </div>
+          <div class="project-table" id="projectGrid"></div>
+        </section>
+
+        <section class="split">
+          <section class="section" id="staff">
+            <div class="section-title">
+              <div><span>STAFF</span><h3>AI社員</h3></div>
+            </div>
+            <div class="staff-list" id="agents"></div>
+          </section>
+
+          <section class="section" id="approvals">
+            <div class="section-title">
+              <div><span>APPROVAL</span><h3>社長承認待ち</h3></div>
+            </div>
+            <div class="approval-list" id="nextActions"></div>
+          </section>
+        </section>
+
+        <section class="section" id="characters">
+          <div class="section-title">
+            <div><span>ASSETS</span><h3>キャラクター資産</h3></div>
+          </div>
+          <div class="character-grid" id="charactersGrid"></div>
+        </section>
+      </main>
     </div>
-    <span class="status-dot"><i></i> LOCAL DASHBOARD</span>
-  </header>
-
-  <main>
-    <section class="hero">
-      <p class="eyebrow">AI PRODUCTION DESK</p>
-      <h2>作る・管理する・次へ進む。<br><span>全部ここから。</span></h2>
-      <p class="lead">LINEスタンプ、グッズ、SNS、Web、キャラクター制作を一画面で管理します。契約・決済・販売申請・最終承認は自動実行しません。</p>
-    </section>
-
-    <section class="metrics" id="metrics"></section>
-
-    <section class="panel">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">PROJECTS</p>
-          <h3>制作プロジェクト</h3>
-        </div>
-        <select id="projectFilter" aria-label="プロジェクト絞り込み">
-          <option value="all">すべて</option>
-          <option value="active">進行中</option>
-          <option value="review">確認待ち</option>
-          <option value="ready">登録準備</option>
-        </select>
-      </div>
-      <div class="project-grid" id="projectGrid"></div>
-    </section>
-
-    <section class="two-col">
-      <article class="panel">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">AI TEAM</p>
-            <h3>担当AI</h3>
-          </div>
-        </div>
-        <div id="agents" class="agent-list"></div>
-      </article>
-
-      <article class="panel">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">NEXT ACTIONS</p>
-            <h3>次にやること</h3>
-          </div>
-        </div>
-        <div id="nextActions" class="action-list"></div>
-      </article>
-    </section>
-
-    <section class="panel">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">CHARACTERS</p>
-          <h3>キャラクター台帳</h3>
-        </div>
-      </div>
-      <div class="character-grid" id="characters"></div>
-    </section>
-  </main>
-
-  <footer>
-    <p>TTworks Control Center — prototype dashboard</p>
-  </footer>
-
+  </div>
   <script src="./app.js"></script>
 </body>
 </html>
