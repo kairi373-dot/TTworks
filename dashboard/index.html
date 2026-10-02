@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>TTworks Control Center</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">TTworks</p>
+      <h1>Control Center</h1>
+    </div>
+    <span class="status-dot"><i></i> LOCAL DASHBOARD</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">AI PRODUCTION DESK</p>
+      <h2>作る・管理する・次へ進む。<br><span>全部ここから。</span></h2>
+      <p class="lead">LINEスタンプ、グッズ、SNS、Web、キャラクター制作を一画面で管理します。契約・決済・販売申請・最終承認は自動実行しません。</p>
+    </section>
+
+    <section class="metrics" id="metrics"></section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">PROJECTS</p>
+          <h3>制作プロジェクト</h3>
+        </div>
+        <select id="projectFilter" aria-label="プロジェクト絞り込み">
+          <option value="all">すべて</option>
+          <option value="active">進行中</option>
+          <option value="review">確認待ち</option>
+          <option value="ready">登録準備</option>
+        </select>
+      </div>
+      <div class="project-grid" id="projectGrid"></div>
+    </section>
+
+    <section class="two-col">
+      <article class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">AI TEAM</p>
+            <h3>担当AI</h3>
+          </div>
+        </div>
+        <div id="agents" class="agent-list"></div>
+      </article>
+
+      <article class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">NEXT ACTIONS</p>
+            <h3>次にやること</h3>
+          </div>
+        </div>
+        <div id="nextActions" class="action-list"></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">CHARACTERS</p>
+          <h3>キャラクター台帳</h3>
+        </div>
+      </div>
+      <div class="character-grid" id="characters"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>TTworks Control Center — prototype dashboard</p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
