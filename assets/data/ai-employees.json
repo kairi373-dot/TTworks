@@ -1,0 +1,113 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-10-03",
+  "commandChain": "担当AI → 海里（AI COO）→ CEO Teppei",
+  "approvalRule": "金銭支出・契約・商品公開・価格変更・外部への正式送信はCEO承認後に実行",
+  "ceo": {
+    "id": "CEO",
+    "name": "Teppei",
+    "role": "CEO",
+    "zone": "CEO Office",
+    "responsibilities": [
+      "最終意思決定",
+      "承認",
+      "ブランド方針",
+      "新しいアイデア"
+    ]
+  },
+  "employees": [
+    {
+      "id": "AI-01",
+      "name": "はる",
+      "role": "市場調査",
+      "zone": "Research",
+      "status": "idle"
+    },
+    {
+      "id": "AI-02",
+      "name": "海里",
+      "role": "AI COO / 経営参謀",
+      "zone": "Strategy",
+      "status": "idle"
+    },
+    {
+      "id": "AI-03",
+      "name": "つくね",
+      "role": "販売・CS担当",
+      "zone": "Customer Service",
+      "status": "idle"
+    },
+    {
+      "id": "AI-04",
+      "name": "つみれ",
+      "role": "商品企画",
+      "zone": "Product Planning",
+      "status": "idle"
+    },
+    {
+      "id": "AI-05",
+      "name": "かよ",
+      "role": "クリティカル・アドバイザー・監査役",
+      "zone": "Strategy",
+      "status": "idle"
+    },
+    {
+      "id": "AI-06",
+      "name": "レイ",
+      "role": "マーケティング",
+      "zone": "Marketing",
+      "status": "idle"
+    },
+    {
+      "id": "AI-07",
+      "name": "ゲン",
+      "role": "総務・事務",
+      "zone": "General Affairs",
+      "status": "idle"
+    },
+    {
+      "id": "AI-08",
+      "name": "モリヤ",
+      "role": "法務・コンプライアンス",
+      "zone": "Legal",
+      "status": "idle"
+    },
+    {
+      "id": "AI-09",
+      "name": "カン太",
+      "role": "品質管理チェッカー",
+      "zone": "Quality Control",
+      "status": "idle"
+    },
+    {
+      "id": "AI-10",
+      "name": "サンギ",
+      "role": "経理・財務",
+      "zone": "Finance",
+      "status": "idle"
+    },
+    {
+      "id": "AI-11",
+      "name": "カナデ",
+      "role": "CTO / 自動化担当",
+      "zone": "Tech Systems",
+      "status": "idle"
+    },
+    {
+      "id": "AI-12",
+      "name": "ピコ",
+      "role": "システム監視担当",
+      "zone": "System Monitoring",
+      "status": "idle"
+    }
+  ],
+  "statuses": [
+    "idle",
+    "working",
+    "reporting",
+    "approval_wait",
+    "blocked",
+    "alert",
+    "completed"
+  ]
+}
