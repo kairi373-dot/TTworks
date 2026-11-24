@@ -38,11 +38,11 @@ window.TTWORKS_DATA={
     "image": "https://stickershop.line-scdn.net/stickershop/v1/product/37225674/LINEStorePC/main.png?v=1"
   },
   {
-    "title": "釣り人ブリオくん あいさつ編",
+    "title": "釣り猫アングラーのあいさつニャ！",
     "category": "釣り人シリーズ",
-    "description": "集合連絡や到着報告など、釣り仲間との連絡に。",
-    "url": "https://store.line.me/stickershop/product/37161327/ja",
-    "image": "https://stickershop.line-scdn.net/stickershop/v1/product/37161327/LINEStorePC/main.png?v=1"
+    "description": "毎日のあいさつや釣り仲間との連絡に。",
+    "url": "https://store.line.me/stickershop/product/37192186/ja",
+    "image": "https://stickershop.line-scdn.net/stickershop/v1/product/37192186/LINEStorePC/main.png?v=1"
   },
   {
     "title": "釣り猫アングラーの仲間・誘いニャ！",
