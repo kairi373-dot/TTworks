@@ -79,7 +79,6 @@ window.TTWORKS_DATA={
   {name:"オリジナルショップ",url:"https://tthworks.designstore.jp/",note:"オリジナルグッズ（公式ショップ）"},
   {name:"Instagram（釣り）",url:"https://www.instagram.com/tete_turi/",note:"釣りの投稿とグッズ紹介"},
   {name:"Threads（釣り）",url:"https://www.threads.net/@tete_turi",note:"釣りの投稿とグッズ紹介"},
-  {name:"Instagram（コーギー）",url:"https://www.instagram.com/corgi_m.haru/",note:"コーギー「はる」の日常"},
   {name:"X",url:"",note:"Official X"}
  ]
 };
